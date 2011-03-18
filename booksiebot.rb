@@ -17,4 +17,10 @@ class Booksiebot < Sinatra::Base
       raise "WHOOPS"
     end
   end
+
+  get '/admin' do
+    @requests = BookRequest.all()
+    haml :admin
+    # erb :admin
+  end
 end

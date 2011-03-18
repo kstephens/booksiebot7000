@@ -1,0 +1,15 @@
+%table
+  %tr
+    %th id
+    %th title
+    %th publisher
+    %th is electronic?
+    %th create_at
+  - for r in @requests
+    %tr
+      %td= r.id
+      %td= r.title
+      %td= r.publisher
+      %td= r.electronic ? 'X' : ''
+      %td= r.created_at
+
